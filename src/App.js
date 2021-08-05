@@ -13,3 +13,6 @@ function App() {
 }
 
 export default App;
+
+//we created a State using  the React Hook and stored the dafaukt value of 45 into a variable 'number'
+//And we have past this number to Parent comopnent
