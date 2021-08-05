@@ -11,3 +11,5 @@ function Child() {
 }
 
 export default Child;
+//We've created a way using a context to initialize the value in our main App comp 
+//and pass the value to the remaining components in the application without explicitly passing the value the property parameeter
