@@ -9,3 +9,5 @@ function Child(props) {
 }
 
 export default Child;
+
+//The variable given in the app component in travelled through the Parent and now to the child with props
