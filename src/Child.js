@@ -1,9 +1,12 @@
 import React from 'react';
 
-function Child(props) {
+function Child() {
+    let value = useContext(ValueContext);
+    let updateValue = value[1];
   return (
     <div >
-      Child number {props.num}
+      Child number {value}
+      <button onClick={() =>{ updateValue(++value[0]) }}>Update Value</button>
     </div>
   );
 }

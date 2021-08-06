@@ -1,18 +1,20 @@
-import React, { useState } from 'react';
-import Parent from './Parent';
-
+import React, { useContext } from "react";
+import Parent from "./Parent";
+import ValueContext from './ValueContext';
+import { useState } from 'react';
 function App() {
-  let [number, setNumber] = useState(45);
+  //let [number, setNumber] = useState(45);
+  let value = useState(48);
   return (
-    <div >
-      Hello World
-      <Parent num={number}></Parent>
-      <button onClick={()=>{ setNumber(++number) }} >Update Number</button>
-    </div>
+    <ValueContext.Provider value={value}>
+      <div>
+        Hello World
+        <Parent></Parent>
+      </div>
+    </ValueContext.Provider>
   );
 }
 
 export default App;
 
-//we created a State using  the React Hook and stored the dafaukt value of 45 into a variable 'number'
-//And we have past this number to Parent comopnent
+//useState is our context consumer in case of using functional
